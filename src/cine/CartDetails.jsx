@@ -3,6 +3,7 @@ import Delete from '../assets/delete.svg';
 import Checkout from '../assets/icons/checkout.svg';
 import { MovieContext } from "../context";
 import { getImgUrl } from '../utils/cine-utility';
+import {toast} from 'react-toastify'
 
 const CartDetails = ({onClose}) => {
 
@@ -19,6 +20,10 @@ dispatch({
   payload: 
     item
   
+});
+
+toast.success(`Removed ${item.title} from the cart`, {
+  position: "bottom-right"
 })
 
 
